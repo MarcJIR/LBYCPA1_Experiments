@@ -5,22 +5,21 @@ unit = 0
 while unit == 0:
     to_convert = input("Input Temperature (with unit) to convert: ")
     to_convert = to_convert.upper()
+    print('C' in to_convert and 'F' not in to_convert and 'K' not in to_convert)
     try:
         if 'C' in to_convert and 'F' not in to_convert and 'K' not in to_convert:
             unit = 'C'
         elif 'F' in to_convert and 'C' not in to_convert and 'K' not in to_convert:
             unit = 'F'
-        elif 'K' in to_convert and 'F' not in to_convert and 'C' not in to_convertd:
+        elif 'K' in to_convert and 'F' not in to_convert and 'C' not in to_convert:
             unit = 'K'
         else:
             raise Exception
-        str(unit)
         to_convert = to_convert.removesuffix(unit)
         to_convert = float(to_convert)
     except:
         print("Wrong Input!")
         unit = 0
-
 
 choice = 0
 while choice != 1 and choice != 2:
