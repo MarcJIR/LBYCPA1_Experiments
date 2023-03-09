@@ -15,8 +15,7 @@ while unit == 0:
             unit = 'K'
         else:
             raise Exception
-        to_convert = to_convert.removesuffix(unit)
-        to_convert = float(to_convert)
+        to_convert = float(to_convert.removesuffix(unit))
     except:
         print("Wrong Input!")
         unit = 0
