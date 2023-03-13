@@ -1,61 +1,31 @@
-""""
-General Objective
-
-    Create a function that calculates the sum of all numbers from 1 to n using
-        For Loop
-        While Loop
-
-    Import the time module
-        Measure the execution time of each function
-        Call the functions using different values of n (10, 100, 1,000, 10,000, 100,000)
-        Record the execution time
-
-Based on the experiment, which of the two loops performs much faster?
-
- 
-
-Here's a python code you can use to measure the execution time of a function
-
 import time
 
-n = 1000
+n = 100000
+x = 0
+while_total_sum = 0
+for_total_sum = 0
 
+#While function start
+print("While Loop performance:")
 time_start = time.time()
 
-for_loop_function(n)
+while x <= n:
+    while_total_sum = while_total_sum + x
+    x = x+1
 
+print(while_total_sum)
 time_end = time.time()
-
 time_total = time_end - time_start
-
-print(time_total)General Objective
-
-    Create a function that calculates the sum of all numbers from 1 to n using
-        For Loop
-        While Loop
-
-    Import the time module
-        Measure the execution time of each function
-        Call the functions using different values of n (10, 100, 1,000, 10,000, 100,000)
-        Record the execution time
-
-Based on the experiment, which of the two loops performs much faster?
-
- 
-
-Here's a python code you can use to measure the execution time of a function
-
-import time
-
-n = 1000
-
-time_start = time.time()
-
-for_loop_function(n)
-
-time_end = time.time()
-
-time_total = time_end - time_start
-
 print(time_total)
-"""
+
+#For function start
+print("\nFor Loop performance:")
+time_start = time.time()
+
+for y in range(n+1):
+    for_total_sum = for_total_sum + y
+
+print(for_total_sum)
+time_end = time.time()
+time_total = time_end - time_start
+print(time_total)
